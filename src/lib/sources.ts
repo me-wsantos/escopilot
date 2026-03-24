@@ -63,12 +63,3 @@ export function buildSources(chunks: SearchChunk[]): Source[] {
     content: chunk.content,
   }));
 }
-/* export function buildSources(chunks: SearchChunk[]): Source[] {
-  return chunks.map((chunk) => ({
-    title: chunk.filepath,
-    page: chunk.pageNumber,
-    chunkId: chunk.chunkId,
-    url: generateSasUrl(chunk.filepath),
-    content: chunk.content,
-  }));
-} */

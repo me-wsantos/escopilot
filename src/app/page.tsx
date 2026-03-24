@@ -126,7 +126,7 @@ export default function ChatPage() {
           </div>
           <div>
             <h1 className="text-lg font-semibold gradient-text">EscoPilot</h1>
-            <p className="text-xs text-[var(--color-text-muted)]">
+            <p className="text-xs text-gray-100">
               Governed RAG · {messages.filter((m) => m.role === "user").length} interações
             </p>
           </div>
@@ -142,8 +142,8 @@ export default function ChatPage() {
                 </svg>
               </div>
               <div>
-                <p className="font-semibold text-[var(--color-text-primary)]">Bem-vindo ao EscoPilot</p>
-                <p className="text-sm text-[var(--color-text-muted)] max-w-md">
+                <p className="text-lg font-semibold text-white">Bem-vindo ao EscoPilot</p>
+                <p className="text-sm text-gray-100 max-w-md">
                   Faça uma pergunta sobre os documentos corporativos. Todas as respostas são fundamentadas, rastreáveis e auditáveis.
                 </p>
               </div>
@@ -156,7 +156,7 @@ export default function ChatPage() {
                   <button
                     key={q}
                     onClick={() => { setInput(q); inputRef.current?.focus(); }}
-                    className="text-xs px-3 py-1.5 rounded-lg glass border border-[var(--color-border-primary)] hover:border-indigo-500/50 text-[var(--color-text-secondary)] hover:text-indigo-300 transition-all duration-200"
+                    className="text-xs px-3 py-1.5 rounded-lg glass border text-gray-50 border-[var(--color-border-primary)] hover:border-indigo-500/50 text-[var(--color-text-secondary)] hover:text-indigo-300 transition-all duration-200"
                   >
                     {q}
                   </button>
@@ -171,11 +171,10 @@ export default function ChatPage() {
               className={`flex animate-fade-in-up ${msg.role === "user" ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-[75%] rounded-2xl px-4 py-3 cursor-pointer transition-all duration-200 ${
-                  msg.role === "user"
-                    ? "bg-gradient-to-r from-indigo-600 to-indigo-500 text-white shadow-lg shadow-indigo-500/20"
-                    : `glass ${selectedMsg === msg.id ? "border-indigo-500/50 shadow-lg shadow-indigo-500/10" : ""}`
-                } ${msg.blocked ? "border border-red-500/30" : ""}`}
+                className={`max-w-[75%] rounded-2xl px-4 py-3 cursor-pointer transition-all duration-200 ${msg.role === "user"
+                  ? "bg-gradient-to-r from-indigo-600 to-indigo-500 text-white shadow-lg shadow-indigo-500/20"
+                  : `glass ${selectedMsg === msg.id ? "border-indigo-500/50 shadow-lg shadow-indigo-500/10" : ""}`
+                  } ${msg.blocked ? "border border-red-500/30" : ""}`}
                 onClick={() => msg.role === "assistant" && setSelectedMsg(msg.id)}
               >
                 {msg.blocked && (
@@ -187,7 +186,7 @@ export default function ChatPage() {
                   </div>
                 )}
                 <p className="text-sm whitespace-pre-wrap leading-relaxed">{msg.content}</p>
-                <p className={`text-[10px] mt-2 ${msg.role === "user" ? "text-indigo-200" : "text-[var(--color-text-muted)]"}`}>
+                <p className={`text-[10px] mt-2 ${msg.role === "user" ? "text-indigo-200" : "text-gray-100"}`}>
                   {msg.timestamp.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}
                 </p>
               </div>
@@ -206,9 +205,9 @@ export default function ChatPage() {
           )}
         </div>
 
-        {/* Input */}
+        {/* Input area highlighting */}
         <form onSubmit={handleSubmit} className="px-6 pb-6 pt-2 shrink-0">
-          <div className="glass rounded-2xl flex items-end gap-3 px-4 py-3 focus-within:border-indigo-500/50 transition-colors">
+          <div className="bg-gray-700 backdrop-blur-xl rounded-2xl flex items-end gap-3 px-4 py-3 border border-indigo-500/20 shadow-xl shadow-black/20 focus-within:border-indigo-500/50 focus-within:shadow-indigo-500/10 transition-all duration-300">
             <textarea
               ref={inputRef}
               value={input}
@@ -219,9 +218,9 @@ export default function ChatPage() {
                   handleSubmit(e);
                 }
               }}
-              placeholder="Pergunte sobre os documentos corporativos..."
+              placeholder="Digite sua pergunta..."
               rows={1}
-              className="flex-1 bg-transparent text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-muted)] resize-none outline-none max-h-32"
+              className="flex-1 bg-transparent text-sm text-[var(--color-text-primary)] placeholder:text-gray-100 resize-none outline-none max-h-32"
               disabled={loading}
               id="chat-input"
             />
@@ -236,7 +235,7 @@ export default function ChatPage() {
               </svg>
             </button>
           </div>
-          <p className="text-[10px] text-center mt-2 text-[var(--color-text-muted)]">
+          <p className="text-[10px] text-center mt-2 text-gray-100">
             EscoPilot · Governed RAG com rastreabilidade total e métricas de confiança
           </p>
         </form>
@@ -246,7 +245,7 @@ export default function ChatPage() {
       <aside className="hidden lg:flex flex-col w-[380px] border-l border-[var(--color-border-primary)] bg-[var(--color-bg-secondary)]">
         <div className="px-5 py-4 border-b border-[var(--color-border-primary)]">
           <h2 className="text-sm font-semibold text-[var(--color-text-primary)]">Painel de Evidências</h2>
-          <p className="text-xs text-[var(--color-text-muted)]">Fontes e métricas de confiança</p>
+          <p className="text-xs text-gray-100">Fontes e métricas de confiança</p>
         </div>
 
         {selectedDetail ? (
@@ -254,7 +253,7 @@ export default function ChatPage() {
             {/* Metrics */}
             {selectedDetail.metrics && (
               <div className="space-y-3">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-100">
                   Métricas de Confiança
                 </h3>
                 {(
@@ -285,7 +284,7 @@ export default function ChatPage() {
             {/* Status */}
             {selectedDetail.blocked !== undefined && (
               <div className="space-y-2">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-100">
                   Status de Segurança
                 </h3>
                 <div className={`glass rounded-xl p-3 flex items-center gap-2 ${selectedDetail.blocked ? "border-red-500/30" : "border-green-500/20"}`}>
@@ -307,7 +306,7 @@ export default function ChatPage() {
             {/* Sources */}
             {selectedDetail.sources && selectedDetail.sources.length > 0 && (
               <div className="space-y-2">
-                <h3 className="text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)]">
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-gray-100">
                   Fontes ({selectedDetail.sources.length})
                 </h3>
                 {selectedDetail.sources.map((src, i) => (
@@ -326,11 +325,11 @@ export default function ChatPage() {
                         <p className="text-xs font-medium text-[var(--color-text-primary)] truncate group-hover:text-indigo-300 transition-colors">
                           {src.title}
                         </p>
-                        <p className="text-[10px] text-[var(--color-text-muted)]">
+                        <p className="text-[10px] text-gray-100">
                           Página {src.page} · {src.chunkId}
                         </p>
                       </div>
-                      <svg className="shrink-0 w-3.5 h-3.5 text-[var(--color-text-muted)] group-hover:text-indigo-400 transition-colors ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <svg className="shrink-0 w-3.5 h-3.5 text-gray-100 group-hover:text-indigo-400 transition-colors ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                       </svg>
                     </div>
@@ -342,17 +341,17 @@ export default function ChatPage() {
             {/* No sources */}
             {(!selectedDetail.sources || selectedDetail.sources.length === 0) && !selectedDetail.blocked && (
               <div className="text-center py-8">
-                <p className="text-xs text-[var(--color-text-muted)]">Nenhuma fonte encontrada para esta resposta</p>
+                <p className="text-xs text-gray-100">Nenhuma fonte encontrada para esta resposta</p>
               </div>
             )}
           </div>
         ) : (
           <div className="flex-1 flex items-center justify-center p-6">
             <div className="text-center space-y-2 opacity-50">
-              <svg className="w-12 h-12 mx-auto text-[var(--color-text-muted)]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
+              <svg className="w-12 h-12 mx-auto text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
               </svg>
-              <p className="text-xs text-[var(--color-text-muted)]">
+              <p className="text-xs text-gray-100">
                 Clique em uma resposta para visualizar as fontes e métricas
               </p>
             </div>

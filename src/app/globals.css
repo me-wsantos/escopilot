@@ -21,6 +21,10 @@
 }
 
 /* ───────── Base ───────── */
+html {
+  font-size: 17px;
+}
+
 body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
