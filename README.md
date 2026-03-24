@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+### Fluxo da requisição
+
+1. O usuário envia uma pergunta para o endpoint POST /api/chat.
+2. O endpoint chama a função processQuery no arquivo src/lib/agent.ts.
+3. A função processQuery executa as seguintes etapas:
+    a. Verifica se a pergunta contém conteúdo nocivo usando a função isHarmful no arquivo src/lib/safety.ts.
+    b. Se a pergunta for nociva, retorna uma resposta bloqueada com o motivo.
+    c. Se a pergunta não for nociva, recupera documentos relevantes usando a função retrieveDocuments no arquivo src/lib/search.ts.
+    d. Constrói fontes com URLs SAS usando a função buildSources no arquivo src/lib/sources.ts.
+    e. Gera uma resposta usando o modelo de linguagem grande (LLM) no arquivo src/lib/openai-client.ts.
+    f. Verifica se a resposta contém conteúdo nocivo usando a função isHarmful no arquivo src/lib/safety.ts.
+    g. Se a resposta for nociva, retorna uma resposta bloqueada com o motivo.
+    h. Calcula métricas RAG usando a função calculateRAGMetrics no arquivo src/lib/metrics.ts.
+    i. Retorna a resposta com as fontes e métricas.
+4. O endpoint retorna a resposta para o usuário.
