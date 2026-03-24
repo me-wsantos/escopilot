@@ -15,6 +15,7 @@ export interface GovernedResponse {
   metrics: RAGMetrics;
   blocked: boolean;
   blockReason?: string;
+  data?: any;
 }
 
 const SYSTEM_PROMPT = `Você é o EscoPilot, um assistente corporativo de IA. Responda APENAS com base no contexto fornecido.
@@ -40,7 +41,7 @@ export async function processQuery(
         blocked: true,
         blockReason: `Input Harmful: ${inputCheck.reason}`,
       };
-      logInteraction(result, query, userId, Date.now() - startTime);
+      //logInteraction(result, query, userId, Date.now() - startTime);
       return result;
     }
 
@@ -64,13 +65,29 @@ export async function processQuery(
         },
       ],
     });
-    const answer =
+
+
+    /* const answer =
       chatResult.choices[0]?.message?.content ??
-      "Não foi possível gerar uma resposta.";
+      "Não foi possível gerar uma resposta."; */
+
+    const result: GovernedResponse = {
+      response:
+        "Teste OK",
+      sources: [],
+      metrics: { faithfulness: 0, answerRelevance: 0, contextPrecision: 0 },
+      blocked: false,
+      blockReason: `Input Harmful: ${inputCheck.reason}`,
+      data: chatResult,
+    };
+
+    return result;
+
 
     // ── Phase 4b: Output safety check ──
-    const outputCheck = await isHarmful(answer);
-    if (outputCheck.harmful) {
+    //const outputCheck = await isHarmful(answer);
+
+    /* if (outputCheck.harmful) {
       const result: GovernedResponse = {
         response:
           "A resposta gerada contém conteúdo que viola nossas políticas de segurança e foi bloqueada.",
@@ -81,13 +98,13 @@ export async function processQuery(
       };
       logInteraction(result, query, userId, Date.now() - startTime);
       return result;
-    }
+    } */
 
     // ── Phase 3: Calculate RAG metrics ──
-    const metrics = await calculateRAGMetrics(query, context, answer);
+    //const metrics = await calculateRAGMetrics(query, context, answer);
 
     // ── Governance: block low-faithfulness with existing sources ──
-    if (metrics.faithfulness < 0.5 && sources.length > 0) {
+    /* if (metrics.faithfulness < 0.5 && sources.length > 0) {
       const result: GovernedResponse = {
         response:
           "Não foi possível fundamentar a resposta com alta confiança nos documentos disponíveis. Por favor, reformule sua pergunta ou consulte um especialista.",
@@ -98,17 +115,21 @@ export async function processQuery(
       };
       logInteraction(result, query, userId, Date.now() - startTime);
       return result;
-    }
+    } */
 
-    const result: GovernedResponse = {
+    /* const result: GovernedResponse = {
       response: answer,
       sources,
       metrics,
       blocked: false,
-    };
-    logInteraction(result, query, userId, Date.now() - startTime);
-    return result;
+    }; */
+
+    //logInteraction(result, query, userId, Date.now() - startTime);
+
+    //return result;
+
   } catch (error) {
+    console.error("processQuery INTERNAL ERROR:", error);
     trackException(error instanceof Error ? error : new Error(String(error)), {
       query,
       userId,
@@ -123,7 +144,7 @@ export async function processQuery(
   }
 }
 
-function logInteraction(
+/* function logInteraction(
   result: GovernedResponse,
   query: string,
   userId: string,
@@ -147,4 +168,4 @@ function logInteraction(
     ),
     durationMs,
   });
-}
+} */

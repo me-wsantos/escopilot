@@ -10,9 +10,9 @@ export const config = {
   openaiKey: process.env.AZURE_OPENAI_KEY ?? "",
   embeddingDeployment:
     process.env.AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME ??
-    "text-embedding-ada-002",
+    "text-embedding-3-small",
   chatDeployment:
-    process.env.AZURE_OPENAI_CHAT_DEPLOYMENT_NAME ?? "gpt-4.1",
+    process.env.AZURE_OPENAI_CHAT_DEPLOYMENT_NAME ?? "gpt-4o",
 
   // Azure Blob Storage
   storageAccountName: process.env.AZURE_STORAGE_ACCOUNT_NAME ?? "",
