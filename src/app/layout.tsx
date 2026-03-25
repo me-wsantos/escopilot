@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "EscoPilot — Governed RAG Assistant",
+  title: "EscoPilot — Base de Conhecimento - Plataforma Atlas",
   description:
     "Assistente corporativo de IA com RAG governado, rastreabilidade de fontes e métricas de confiança.",
 };

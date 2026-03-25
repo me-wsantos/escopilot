@@ -126,8 +126,8 @@ export default function ChatPage() {
           </div>
           <div>
             <h1 className="text-lg font-semibold gradient-text">EscoPilot</h1>
-            <p className="text-xs text-gray-100">
-              Governed RAG · {messages.filter((m) => m.role === "user").length} interações
+            <p className="text-xs text-gray-300">
+              Base de Conhecimento - Plataforma Atlas
             </p>
           </div>
         </header>
@@ -144,14 +144,14 @@ export default function ChatPage() {
               <div>
                 <p className="text-lg font-semibold text-white">Bem-vindo ao EscoPilot</p>
                 <p className="text-sm text-gray-100 max-w-md">
-                  Faça uma pergunta sobre os documentos corporativos. Todas as respostas são fundamentadas, rastreáveis e auditáveis.
+                  Faça uma pergunta sobre a Plataforma Atlas. Todas as respostas são fundamentadas, rastreáveis e auditáveis.
                 </p>
               </div>
               <div className="flex gap-2 flex-wrap justify-center max-w-lg">
                 {[
-                  "Qual o procedimento para contestar uma transação?",
-                  "Quais são as políticas de férias?",
-                  "Como solicitar um reembolso?",
+                  "Como uma nova funcionalidade impacta as tabelas, telas e parâmetros do sistema?",
+                  "Quais são as boas práticas técnicas e de performance?",
+                  "Qual é o fluxo completo da operação de cobrança?",
                 ].map((q) => (
                   <button
                     key={q}
@@ -235,9 +235,6 @@ export default function ChatPage() {
               </svg>
             </button>
           </div>
-          <p className="text-[10px] text-center mt-2 text-gray-100">
-            EscoPilot · Governed RAG com rastreabilidade total e métricas de confiança
-          </p>
         </form>
       </div>
 
@@ -258,14 +255,26 @@ export default function ChatPage() {
                 </h3>
                 {(
                   [
-                    ["Fidelidade", selectedDetail.metrics.faithfulness],
-                    ["Relevância", selectedDetail.metrics.answerRelevance],
-                    ["Precisão do Contexto", selectedDetail.metrics.contextPrecision],
-                  ] as [string, number][]
-                ).map(([label, value]) => (
+                    ["Fidelidade", selectedDetail.metrics.faithfulness, "A resposta é totalmente fundamentada pelo contexto?"],
+                    ["Relevância", selectedDetail.metrics.answerRelevance, "A resposta aborda a pergunta?"],
+                    ["Precisão do Contexto", selectedDetail.metrics.contextPrecision, "Os trechos recuperados são relevantes para a pergunta?"],
+                  ] as [string, number, string][]
+                ).map(([label, value, description]) => (
                   <div key={label} className="space-y-1">
                     <div className="flex justify-between text-xs">
-                      <span className="text-[var(--color-text-secondary)]">{label}</span>
+                      <div className="flex items-center gap-1.5 group relative">
+                        <span className="text-[var(--color-text-secondary)]">{label}</span>
+                        <div className="cursor-help text-gray-400 hover:text-indigo-400 transition-colors">
+                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                          </svg>
+                        </div>
+                        {/* Tooltip */}
+                        <div className="absolute bottom-full left-0 mb-2 w-48 p-2 bg-gray-900 text-[10px] text-gray-200 rounded-lg border border-indigo-500/30 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                          {description}
+                          <div className="absolute top-full left-4 -mt-1 border-4 border-transparent border-t-gray-900" />
+                        </div>
+                      </div>
                       <span className={`font-medium ${value >= 0.75 ? "text-green-400" : value >= 0.5 ? "text-yellow-400" : "text-red-400"}`}>
                         {(value * 100).toFixed(0)}% · {metricLabel(value)}
                       </span>
@@ -326,7 +335,7 @@ export default function ChatPage() {
                           {src.title}
                         </p>
                         <p className="text-[10px] text-gray-100">
-                          Página {src.page} · {src.chunkId}
+                          Página {src.page}
                         </p>
                       </div>
                       <svg className="shrink-0 w-3.5 h-3.5 text-gray-100 group-hover:text-indigo-400 transition-colors ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
