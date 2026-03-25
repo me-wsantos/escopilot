@@ -150,4 +150,19 @@ O sistema segue uma "Cadeia de Governança" robusta:
 Este projeto faz parte de um desafio de hackathon e é destinado a fins de demonstração.
 
 ---
-**Desenvolvido com foco em Governança Corporativa e Segurança em IA.**
+### **Contact** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="25" height="25" />
+
+Para perguntas ou sugestões, entre em contato.
+
+| Jéssica Gonçalves  | Wellington Santos  |
+|:-----------:|:-----------:|
+|[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jessica-silva-1a9b3c4d/)    | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-wellington-santos/) |
+
+---
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="35" height="35" /> Contibuição 
+
+Sinta-se à vontade para contribuir para este repositório. Abra uma issue ou envie um pull request com suas sugestões e melhorias.
+
+**Se este projeto foi útil para você, deixe uma estrela! Isso nos ajuda muito.** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="25" height="25" />
+
