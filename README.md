@@ -106,7 +106,7 @@ A solução utiliza de forma sinérgica o ecossistema de dados e IA da Microsoft
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/escopilot.git
+   git clone https://github.com/me-wsantos/escopilot.git
    cd escopilot
    ```
 
