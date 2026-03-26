@@ -2,6 +2,8 @@
 
 ### RAG Governado para Conformidade Empresarial e Equipes Reguladas
 
+![logo](https://github.com/me-wsantos/escopilot/blob/main/assets/logo.png?raw=true)
+
 Organizações que operam em ambientes regulados — como financeiro, jurídico e compliance — enfrentam um desafio crítico: acessar rapidamente informações confiáveis a partir de documentos e sistemas complexos, sem risco de interpretações incorretas ou decisões não auditáveis.
 
 Este projeto apresenta um agente inteligente governado, baseado em **Geração Aumentada por Recuperação (RAG)**, capaz de transformar conhecimento operacional e técnico em respostas rastreáveis, explicáveis e seguras.
@@ -21,8 +23,6 @@ Este projeto foi desenvolvido para atender ao **Innovation Challenge March 2026*
 > Equipes reguladas precisam de respostas rápidas a partir de documentos corporativos sem o risco de alucinações ou violações de políticas. O sistema deve manter total rastreabilidade, fundamentação e mensurabilidade, implementando verificações de segurança e demonstrando explicabilidade por meio de métricas de avaliação.
 
 ---
-
-
 
 ## ✨ Arquitetura
 ![arquitetura](https://github.com/me-wsantos/escopilot/blob/main/assets/arquitetura.png?raw=true)
