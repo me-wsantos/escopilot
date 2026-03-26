@@ -156,7 +156,7 @@ Para perguntas ou sugestões, entre em contato.
 
 | Jéssica Gonçalves  | Wellington Santos  |
 |:-----------:|:-----------:|
-|[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jessica-silva-1a9b3c4d/)    | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-wellington-santos/) |
+|[![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jessica-de-castro-gon%C3%A7alves-aa383a35?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)    | [![LinkedIn](https://img.shields.io/badge/Linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/-wellington-santos/) |
 
 ---
 
