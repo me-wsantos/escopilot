@@ -50,3 +50,6 @@ jobs:
           skip_app_build: false
           is_static_export: false
           skip_deploy_on_missing_secrets: true
+
+      - name: Debug Token
+        run: echo "Token length: $(echo '${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}' | wc -c)"          
