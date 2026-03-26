@@ -99,5 +99,13 @@ export async function retrieveDocuments(
 function extractPageNumberFromChunkId(chunkId: string): number {
   // Procura por "pages_X" no chunk_id
   const match = chunkId.match(/_pages_(\d+)/);
-  return match ? parseInt(match[1], 10) : 0;
+
+  if (match && match[1]) {
+    const pageNum = parseInt(match[1], 10);
+    console.log(`📄 Página extraída do chunk_id: ${pageNum}`);
+    return pageNum;
+  }
+
+  console.warn(`⚠️ Não conseguiu extrair página de: ${chunkId}`);
+  return 0;
 }

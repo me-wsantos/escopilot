@@ -150,7 +150,7 @@ O sistema segue uma "Cadeia de Governança" robusta:
 Este projeto faz parte de um desafio de hackathon e é destinado a fins de demonstração.
 
 ---
-### **Contact** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="25" height="25" />
+### **Contatos** <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png" alt="Love Letter" width="25" height="25" />
 
 Para perguntas ou sugestões, entre em contato.
 
@@ -160,7 +160,7 @@ Para perguntas ou sugestões, entre em contato.
 
 ---
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="35" height="35" /> Contibuição 
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="35" height="35" /> Contribuição 
 
 Sinta-se à vontade para contribuir para este repositório. Abra uma issue ou envie um pull request com suas sugestões e melhorias.
 
