@@ -2,7 +2,7 @@
 
 ### RAG Governado para Conformidade Empresarial e Equipes Reguladas
 
-![logo](https://github.com/me-wsantos/escopilot/blob/main/assets/logo.png?raw=true)
+![logo](https://github.com/me-wsantos/escopilot/blob/main/public/assets/logo.png?raw=true)
 
 Organizações que operam em ambientes regulados — como financeiro, jurídico e compliance — enfrentam um desafio crítico: acessar rapidamente informações confiáveis a partir de documentos e sistemas complexos, sem risco de interpretações incorretas ou decisões não auditáveis.
 
@@ -25,7 +25,7 @@ Este projeto foi desenvolvido para atender ao **Innovation Challenge March 2026*
 ---
 
 ## ✨ Arquitetura
-![arquitetura](https://github.com/me-wsantos/escopilot/blob/main/assets/arquitetura.png?raw=true)
+![arquitetura](https://github.com/me-wsantos/escopilot/blob/main/public/assets/arquitetura.png?raw=true)
 
 ## ✨ Principais Recursos
 
