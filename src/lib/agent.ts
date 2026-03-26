@@ -15,7 +15,6 @@ export interface GovernedResponse {
   metrics: RAGMetrics;
   blocked: boolean;
   blockReason?: string;
-  data?: any;
 }
 
 const SYSTEM_PROMPT = `Você é um agente especialista na Plataforma Atlas, atuando como copiloto para analistas, desenvolvedores e times de produto na construção de escopos completos, claros e governados.
