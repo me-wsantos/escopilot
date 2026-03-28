@@ -4,6 +4,9 @@
 
 ![logo](https://github.com/me-wsantos/escopilot/blob/main/public/assets/logo.png?raw=true)
 
+🚀 **[Acesse o EscoPilot:](https://purple-moss-0a23d490f.4.azurestaticapps.net/)**
+
+
 Organizações que operam em ambientes regulados — como financeiro, jurídico e compliance — enfrentam um desafio crítico: acessar rapidamente informações confiáveis a partir de documentos e sistemas complexos, sem risco de interpretações incorretas ou decisões não auditáveis.
 
 Este projeto apresenta um agente inteligente governado, baseado em **Geração Aumentada por Recuperação (RAG)**, capaz de transformar conhecimento operacional e técnico em respostas rastreáveis, explicáveis e seguras.
@@ -16,6 +19,7 @@ A arquitetura foi pensada para escalar de uma prova de conceito para produção,
 
 Como resultado, o **EscoPilot** reduz o **tempo de análise**, melhora a **qualidade dos escopos**, diminui **retrabalho entre áreas** e estabelece um **novo padrão de uso de IA em ambientes corporativos críticos**: não apenas responder, mas responder com **responsabilidade, contexto e governança**.
 
+
 ---
 
 ## 🎯 O Desafio Hackathon
@@ -23,6 +27,18 @@ Este projeto foi desenvolvido para atender ao **Innovation Challenge March 2026*
 > Equipes reguladas precisam de respostas rápidas a partir de documentos corporativos sem o risco de alucinações ou violações de políticas. O sistema deve manter total rastreabilidade, fundamentação e mensurabilidade, implementando verificações de segurança e demonstrando explicabilidade por meio de métricas de avaliação.
 
 ---
+
+## ✨ Vídeo de apresentação
+
+<p align="center">
+  <a href="https://youtu.be/nHJGWzJmNeE">
+    <img src="https://github.com/me-wsantos/escopilot/blob/main/public/assets/thumb.png?raw=true" alt="Youtube">
+  </a>
+</p>
+
+## ✨ Apresentação 
+
+[![ppt](https://github.com/me-wsantos/hackathon-ms/blob/main/assets/power-point-readme.png?raw=true)](https://projeto-escopilot.my.canva.site/)
 
 ## ✨ Arquitetura
 ![arquitetura](https://github.com/me-wsantos/escopilot/blob/main/public/assets/arquitetura.png?raw=true)
@@ -59,7 +75,7 @@ O EscoPilot foi projetado para excelência técnica e conformidade rigorosa, ate
 
 ### ⚡ Desempenho
 - **Busca Híbrida e Semântica**: Implementação de **Azure AI Search** com vetores e ranking semântico, garantindo a recuperação dos trechos mais relevantes em milissegundos.
-- **Métricas em Tempo Real**: Avaliação automatizada de **RAGAS** (Faithfulness, Relevance, Precision) integrada ao ciclo de vida da requisição, garantindo qualidade contínua.
+- **Métricas em Tempo Real**: Avaliação automatizada de **RAGAS** (Fidelidade, Relevância, Precisão) integrada ao ciclo de vida da requisição, garantindo qualidade contínua.
 - **Arquitetura Next.js 14**: Uso de *Server Components* e otimizações de borda para uma interface fluida e de baixa latência.
 
 ### 💡 Inovação
@@ -69,7 +85,7 @@ O EscoPilot foi projetado para excelência técnica e conformidade rigorosa, ate
 
 ### 🌐 Amplitude dos Serviços Azure
 A solução utiliza de forma sinérgica o ecossistema de dados e IA da Microsoft:
-- **Azure OpenAI**: Modelos de geração (GPT-4o) e embeddings.
+- **Azure OpenAI**: Modelos de geração (GPT-5) e embeddings.
 - **Azure AI Search**: Motor de busca vetorial e semântica.
 - **Azure Blob Storage**: Repositório seguro de documentos corporativos.
 - **Azure AI Content Safety**: Camada de proteção em tempo real.
