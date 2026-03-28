@@ -38,7 +38,9 @@ Este projeto foi desenvolvido para atender ao **Innovation Challenge March 2026*
 
 ## ✨ Apresentação 
 
-[![ppt](https://github.com/me-wsantos/escopilot/blob/main/public/assets/presentation.png?raw=true)](https://github.com/me-wsantos/escopilot/blob/main/public/assets/EscoPilot.pdf)
+<a href="https://github.com/me-wsantos/escopilot/blob/main/public/assets/EscoPilot.pdf">
+  <img src="https://github.com/me-wsantos/escopilot/blob/main/public/assets/presentation.png?raw=true" width="300"/>
+</a>
 
 ## ✨ Arquitetura
 ![arquitetura](https://github.com/me-wsantos/escopilot/blob/main/public/assets/arquitetura.png?raw=true)
