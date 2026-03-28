@@ -4,8 +4,7 @@
 
 ![logo](https://github.com/me-wsantos/escopilot/blob/main/public/assets/logo.png?raw=true)
 
-🚀 **[Acesse o EscoPilot:](https://purple-moss-0a23d490f.4.azurestaticapps.net/)**
-
+🌐 **[Acesse o EscoPilot aqui](https://purple-moss-0a23d490f.4.azurestaticapps.net/)**
 
 Organizações que operam em ambientes regulados — como financeiro, jurídico e compliance — enfrentam um desafio crítico: acessar rapidamente informações confiáveis a partir de documentos e sistemas complexos, sem risco de interpretações incorretas ou decisões não auditáveis.
 
